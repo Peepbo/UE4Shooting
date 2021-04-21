@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 
 #include "Engine/Classes/Camera/CameraComponent.h"
+#include "FPSProjectile.h"
 
 #include "FPSCharacter.generated.h"
 
@@ -40,6 +41,15 @@ public:
 
 	UFUNCTION()
 		void StopJump();
+
+	UFUNCTION()
+		void Fire();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "GamePlay")
+		FVector MuzzleOffset;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
+		TSubclassOf<AFPSProjectile> ProjectileClass;
 
 	UPROPERTY(VisibleAnywhere)
 		UCameraComponent* FPSCameraComponent;
