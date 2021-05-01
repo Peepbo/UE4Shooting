@@ -54,4 +54,3 @@ void AFPSProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor
 			Velocity * 100.0f, Hit.ImpactPoint);
 	}
 }
-

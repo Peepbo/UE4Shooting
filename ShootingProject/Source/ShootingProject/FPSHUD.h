@@ -17,7 +17,6 @@ class SHOOTINGPROJECT_API AFPSHUD : public AHUD
 protected:
 	UPROPERTY(EditAnywhere)
 		UTexture2D* CrosshairTexture;
-
 public:
 	virtual void DrawHUD() override;
 };

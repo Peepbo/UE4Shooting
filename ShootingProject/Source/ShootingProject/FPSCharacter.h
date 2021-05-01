@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 
+#include "Components/TimelineComponent.h"
+
 #include "Engine/Classes/Camera/CameraComponent.h"
 #include "FPSProjectile.h"
 
@@ -23,7 +25,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -56,4 +58,7 @@ public:
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Mesh")
 		USkeletalMeshComponent* FPSMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bullet")
+		int32 Ammo;
 };
